@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Output</title>
+
+    <script>
+        var noSiswa = [1, 2, 3, 4, 5];
+
+        var namaSiswa = [
+            "Budi",
+            "Takdir",
+            "Sumsal",
+            "Yanto"
+        ];
+
+        var kelasSiswa = [
+            "X IPS 2",
+            "X IPA 1",
+            "XI IPS 3",
+            "X IPS 1"
+        ];
+
+        var alamatSiswa = [
+            "JL. Karimun No. 32, Tegal",
+            "JL. Sudirman No 45, Bandung",
+            "JL. Ahmad Yani No. 7, Surabaya",
+            "JL. Diponegoro No.21, Semarang"
+        ];
+    </script>
+</head>
+
+<body>
+
+    <h2>Data Siswa</h2>
+
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Alamat</th>
+        </tr>
+
+        <tbody id="isitable"></tbody>
+    </table>
+
+    <script>
+        var tabel = document.getElementById("isitable");
+        var isi = "";
+
+        for (var i = 0; i < namaSiswa.length; i++) {
+
+            isi += "<tr>";
+            isi += "<td>" + noSiswa[i] + "</td>";
+            isi += "<td>" + namaSiswa[i] + "</td>";
+            isi += "<td>" + kelasSiswa[i] + "</td>";
+            isi += "<td>" + alamatSiswa[i] + "</td>";
+            isi += "</tr>";
+        }
+
+        tabel.innerHTML = isi;
+    </script>
+
+</body>
+</html>
